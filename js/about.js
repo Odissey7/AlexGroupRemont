@@ -8,24 +8,6 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
-// // Закрыть модальное окно при клике вне его
-// document.querySelector("#mobule_header, .mobule_header").addEventListener('click', event => {
-//     event._isClickWithInModal = true;
-// });
-// document.getElementById("mobule_header").addEventListener('click', event => {
-//     if (event._isClickWithInModal) return;
-//     event.currentTarget.classList.remove('mobule_header_active');
-// });
-
-// var burger = document.querySelector('.mobule_header_active');
-// document.addEventListener('mousedown', function(e){
-//     if(e.target.closest('.mobule_header') == null){
-//         document.getElementById("mobule_header").classList.remove("mobule_header_active")
-//         document.querySelector('.mob_big').classList.remove('mob_big_active');
-//         document.querySelector('.btn_burger_wrapp').classList.remove('burger_active');
-//     }
-// });
-
 document.querySelector('.btn_burger_wrapp').onclick = function () {
     document.querySelector('.btn_burger_wrapp').classList.toggle('burger_active');
     document.querySelector('.mobule_header').classList.toggle('mobule_header_active');
@@ -47,21 +29,9 @@ document.querySelector('.btn_footer').onclick = function () {
     document.querySelector('.form_work').classList.add('form_work_active');
     document.querySelector('.popup_wrapp_work').classList.add('popup_wrapp_work_active');
 }
-document.querySelector('.btn_work').onclick = function () {
-    document.querySelector('.form_work').classList.add('form_work_active');
-    document.querySelector('.popup_wrapp_work').classList.add('popup_wrapp_work_active');
-}
 document.querySelector('.btn_close_popup').onclick = function () {
     document.querySelector('.form_work').classList.remove('form_work_active');
     document.querySelector('.popup_wrapp_work').classList.remove('popup_wrapp_work_active');
-}
-document.querySelector('.btn_procent').onclick = function () {
-    document.querySelector('.form_work2').classList.add('form_work_active');
-    document.querySelector('.popup_wrapp_work2').classList.add('popup_wrapp_work_active');
-}
-document.querySelector('.btn_close_popup2').onclick = function () {
-    document.querySelector('.form_work2').classList.remove('form_work_active');
-    document.querySelector('.popup_wrapp_work2').classList.remove('popup_wrapp_work_active');
 }
 
 // Закрыть модальное окно при нажатии на Esc
@@ -97,22 +67,7 @@ window.addEventListener('keydown', (e) => {
     }
 });
 
-// Закрыть модальное окно при клике вне его
-document.querySelector("#form_work2, .form_work2").addEventListener('click', event => {
-    event._isClickWithInModal = true;
-});
-document.getElementById("form_work2").addEventListener('click', event => {
-    if (event._isClickWithInModal) return;
-    event.currentTarget.classList.remove('form_work_active');
-});
 
-var popup = document.querySelector('.form_work_active');
-document.addEventListener('mousedown', function(e){
-    if(e.target.closest('.form_work2') === null){
-        document.getElementById("form_work2").classList.remove("form_work_active")
-        document.querySelector('.popup_wrapp_work2').classList.remove('popup_wrapp_work_active');
-    }
-});
 
 
 jQuery(document).ready(function () {
@@ -205,16 +160,6 @@ jin.addEventListener('input', function(e){
     jin.value = jin.value.replace(/[0-9]/g, "");
 });
 
-// btn.addEventListener('click', function(){
-//     let val = jin.value;
-//     let val1 = jnum.value;
-//     if ( val + val1) {
-//     jout.textContent = `Мы с вами свяжимся ${val} !`;
-//     } else {
-//     alert("Введите имя");
-//     }
-// });
-
 
 $("body").on("submit", "#skidka", function(event) {
     event.preventDefault();
@@ -240,96 +185,6 @@ translation: {
         }
     });
 });
-
-
-
-
-
-
-document.querySelector('.name_popup').onclick = function () {
-    document.querySelector('.popup_input_text').classList.add('popup_input_text_active');
-}
-document.querySelector('.phone_pop').onclick = function () {
-    document.querySelector('.popup_input_text_sec').classList.add('popup_input_text_active');
-}
-
-document.querySelector('.name_popup_1').onclick = function () {
-    document.querySelector('.popup_input_text_1').classList.add('popup_input_text_active');
-}
-document.querySelector('.phone_pop_1').onclick = function () {
-    document.querySelector('.popup_input_text_sec_1').classList.add('popup_input_text_active');
-}
-
-
-
-
-// Получаем элементы слайдера
-const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const slides = Array.from(slider.querySelectorAll('img'));
-const slideCount = slides.length;
-let slideIndex = 0;
-
-// Устанавливаем обработчики событий для кнопок
-prevButton.addEventListener('click', showPreviousSlide);
-nextButton.addEventListener('click', showNextSlide);
-
-// Функция для показа предыдущего слайда
-function showPreviousSlide() {
-slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-updateSlider();
-}
-
-// Функция для показа следующего слайда
-function showNextSlide() {
-slideIndex = (slideIndex + 1) % slideCount;
-updateSlider();
-}
-
-// Функция для обновления отображения слайдера
-// function updateSlider() {
-// slides.forEach((slide, index) => {
-//     if (index === slideIndex) {
-//     slide.style.display = 'block';
-//     } else {
-//     slide.style.display = 'none';
-//     }
-// });
-// }
-
-function updateSlider() {
-slides.forEach((slide, index) => {
-    if (index === slideIndex) {
-    slide.classList.remove('slider_img_hidden');
-    } else {
-        slide.classList.add('slider_img_hidden');
-    }
-});
-}
-
-// Инициализация слайдера
-updateSlider();
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const backToTop = document.getElementById("back-to-top");
-
-//     // Показать/скрыть кнопку при прокрутке страницы
-//     window.addEventListener("scroll", function () {
-//     if (window.pageYOffset &gt, 300) {
-//         backToTop.style.display = "block";
-//     } else {
-//         backToTop.style.display = "none";
-//     }
-//     });
-
-//     // Плавная прокрутка при клике на кнопку
-//     backToTop.addEventListener("click", function (event) {
-//     event.preventDefault();
-//     window.scrollTo({ top: 0, behavior: "smooth" });
-//     });
-// });
 
 
 

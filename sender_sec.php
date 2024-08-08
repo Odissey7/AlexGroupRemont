@@ -13,9 +13,7 @@
 	
 	$msg=" Заявка с главной страницы
     Имя: $name /n
-    Телефон: $phone /n
-    Почта: $email /n
-    Текст: $text"; 	
+    Телефон: $phone /n"; 	
 	mail($to, $subject, $msg, "From: $to ");
 
 ?>
