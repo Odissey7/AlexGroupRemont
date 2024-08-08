@@ -116,11 +116,14 @@ header {
 .nav_list {
     width: 70%;
     transition: all 0.4s linear;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     color: #fff;
-    display: flex;
+    /* display: flex; */
     align-items: center;
     margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 60% 30% 10%;
 }
 
 .header_list {
@@ -144,6 +147,10 @@ header {
 :focus {
     outline: 0px solid #3feee6;
     box-shadow: 0 0 20px 3px #3feee6;
+}
+a:focus {
+    outline: 0px solid #3feee6;
+    box-shadow: none;
 }
 
 .header_item_links {
@@ -183,12 +190,12 @@ header {
     cursor: pointer;
     text-transform: uppercase;
     /* font-family: "Nunito"; */
-    font-size: 25px;
+    /* font-size: 25px; */
     color: #000;
     border: none;
     background-color: #fbeec1;
     white-space: nowrap;
-    width: 400px;
+    /* width: 400px; */
     padding: 30px 40px;
     margin: 0;
     margin-left: 25px;
@@ -326,6 +333,10 @@ header {
     width: 50px;
 }
 
+.tel_header_sec {
+    margin-left: 10px;
+    width: 50px;
+}
 
 
 .btn_burger_wrapp {
@@ -413,7 +424,7 @@ header {
     z-index: 88;
 }
 
-@media (min-width:951px) {
+@media (min-width:971px) {
     .btn_burger_wrapp {
         display: none;
     }
@@ -478,7 +489,7 @@ header {
 }
 
 
-@media (min-width:951px) {
+@media (min-width:971px) {
     .burger_wrapp {
         display: none;
     }
@@ -1247,7 +1258,44 @@ label.error{
     letter-spacing: 5px;
     user-select: none;
     font-size: 40px;
+    margin-bottom: 0;
 }
+
+.contact_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 20px;
+    padding-bottom: 20px;
+}
+
+.contact_text_min {
+    color: #fff;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+}
+
+.pochta_link {
+    cursor: pointer;
+    transition: all 0.4s linear;
+    color: #3feee6;
+}
+
+.pochta_link:hover {
+    color: #fff;
+    transition: all 0.4s linear;
+}
+
+.img_main_tel {
+    width: 50px;
+    transition: all 0.4s linear;
+}
+
+.img_main_tel:hover {
+    scale: 1.05;
+    transition: all 0.4s linear;
+}
+
+
 
 .footer_wrapp {
     position: relative;
@@ -1337,7 +1385,7 @@ label.error{
 }
 
 
-.footer_about {
+.contact_wrapp_about {
     margin-top: 240px;
 }
 
@@ -1432,10 +1480,10 @@ label.error{
         font-size: 17px;
         transition: all 0.4s linear;
     }
-    .btn_head {
+    /* .btn_head {
         width: 300px;
         font-size: 20px;
-    }
+    } */
 
     .btn_head_mod {
         width: 100%;
@@ -1649,7 +1697,7 @@ label.error{
     }
 }
 
-@media (max-width:950px) {
+@media (max-width:970px) {
     .lead_image_ex {
         width: 40px;
     }
@@ -1686,7 +1734,7 @@ label.error{
     }
 
     .footer {
-        margin-top: 0px;
+        margin-top: 50px;
     }
 
     .footer_about {
@@ -1784,6 +1832,11 @@ label.error{
 @media (max-width:820px) {
     .nav_footer {
         width: 150%;
+    }
+
+    .contact_list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
     }
 }
 
@@ -1974,6 +2027,10 @@ label.error{
 
 @media (max-width:540px) {
 
+    .contact_text {
+        font-size: 30px;
+    }
+
 @keyframes row {
     0% {
         color: #000;
@@ -2161,6 +2218,13 @@ label.error{
 }
 
 @media (max-width:424px) {
+
+    .contact_list {
+        scale: 0.9;
+        width: 95%;
+        transform: translate(-4.5%, 0);
+    }
+    
     .nav_footer {
         scale: 0.35;
         width: 250%;
@@ -2205,6 +2269,11 @@ label.error{
 }
 
 @media (max-width:400px) {
+
+    .contact_item {
+        scale: 0.9;
+    }
+
     .name_company_span {
         font-size: 20px;
         padding: 3px;
@@ -2259,6 +2328,14 @@ label.error{
     .back-to-top {
         scale: 0.45;
         right: -3%;
+    }
+
+    .pochta_link {
+        font-size: 13px;
+    }
+
+    .contact_list {
+        transform: translate(-5.5%, 0);
     }
 }
 @media (max-width:340px) {
