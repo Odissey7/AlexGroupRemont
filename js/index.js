@@ -43,10 +43,10 @@ document.querySelector('.btn_head').onclick = function () {
     document.querySelector('.form_work').classList.add('form_work_active');
     document.querySelector('.popup_wrapp_work').classList.add('popup_wrapp_work_active');
 }
-document.querySelector('.btn_footer').onclick = function () {
-    document.querySelector('.form_work').classList.add('form_work_active');
-    document.querySelector('.popup_wrapp_work').classList.add('popup_wrapp_work_active');
-}
+// document.querySelector('.btn_footer').onclick = function () {
+//     document.querySelector('.form_work').classList.add('form_work_active');
+//     document.querySelector('.popup_wrapp_work').classList.add('popup_wrapp_work_active');
+// }
 document.querySelector('.btn_work').onclick = function () {
     document.querySelector('.form_work').classList.add('form_work_active');
     document.querySelector('.popup_wrapp_work').classList.add('popup_wrapp_work_active');

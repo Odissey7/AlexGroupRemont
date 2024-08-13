@@ -114,7 +114,7 @@ header {
 }
 
 .nav_list {
-    width: 70%;
+    width: 80%;
     transition: all 0.4s linear;
     /* justify-content: space-between; */
     color: #fff;
@@ -123,7 +123,7 @@ header {
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: 60% 30% 10%;
+    grid-template-columns: 70% 22% 8%;
 }
 
 .header_list {
@@ -198,8 +198,13 @@ a:focus {
     /* width: 400px; */
     padding: 30px 40px;
     margin: 0;
-    margin-left: 25px;
+    /* margin-left: 25px; */
     transition: all 0.4s linear;
+}
+
+.btn_head_big {
+    margin-left: 5px;
+
 }
 
 .btn_head_bur {
@@ -1233,10 +1238,10 @@ label.error{
 .footer {
     position: relative;
     left: 0;
-    bottom: 0;
+    bottom: 1;
     width: 100%;
     flex: 0 0 auto;
-    margin-top: 100px;
+    /* margin-top: 100px; */
     height: 200px;
     background-color: #05386b;
 }
@@ -1264,11 +1269,21 @@ label.error{
 .contact_list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
     margin: 0 20px;
     padding-bottom: 20px;
 }
 
+.contact_item {
+    transition: all 0.4s linear;
+}
+.contact_item:hover {
+    transition: all 0.4s linear;
+    box-shadow: 0 0 20px 5px #3feee6;
+}
+
 .contact_text_min {
+    user-select: none;
     color: #fff;
     text-transform: uppercase;
     margin-bottom: 2px;
@@ -1342,6 +1357,7 @@ label.error{
 .footer_text_big {
     user-select: none;
     cursor: pointer;
+    top: 20px;
     left: 15%;
     scale: 1.6;
     position: absolute;
@@ -1360,15 +1376,15 @@ label.error{
 
 
 .back-to-top {
+    user-select: none;
     position: absolute;
     right: 5%;
-    bottom: -130%;
+    top: 24px;
     font-size: 24px;
     color: #fff;
     padding: 10px 20px;
     scale: 1.1;
     border-radius: 5px;
-    cursor: pointer;
     transition: all 0.4s linear;
     cursor: pointer;
     background: #3feee6;
@@ -1411,7 +1427,7 @@ label.error{
 
 
 .video {
-    opacity: 0.3;
+    opacity: 0.2;
     z-index: -5;
     position: fixed;
     left: 0;
@@ -1419,6 +1435,20 @@ label.error{
     width: 100%;
     height: 100%;
     scale: 1.2;
+}
+
+.video_sec {
+    object-fit: cover;
+    display: none;
+    opacity: 0.2;
+    z-index: -5;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    scale: 1.2;
+
 }
 
 
@@ -1473,7 +1503,7 @@ label.error{
 @media (max-width:1500px) {
 
     .footer {
-        height: 160px;
+        height: 100px;
     }
 
     .header_item_links {
@@ -1588,10 +1618,6 @@ label.error{
 
     .garant_wrapp {
         margin-top: 60px;
-    }
-
-    .video {
-        display: none;
     }
 
     .slider_wrapp {
@@ -1722,6 +1748,14 @@ label.error{
     .head_big_wrapp {
         padding-top: 100px;
     }
+
+    .video {
+        display: none;
+    }
+
+    .video_sec {
+        display: flex;
+    }
 }
 
 @media (max-width:910px) {
@@ -1733,9 +1767,9 @@ label.error{
         margin-top: 60px;
     }
 
-    .footer {
+    /* .footer {
         margin-top: 50px;
-    }
+    } */
 
     .footer_about {
     margin-top: 240px;
@@ -2231,14 +2265,14 @@ label.error{
     }
 
     .back-to-top {
-        scale: 0.5;
-        bottom: -70%;
+        scale: 0.7;
     }
     .back-to-top:hover {
-        scale: 0.55;
+        scale: 0.75;
     }
 
     .footer_text_big {
+        top: 38px;
         margin: 0;
         scale: 1.1;
     }
