@@ -246,7 +246,9 @@ a:focus {
 
 .about_compani {
     grid-template-columns: repeat(10, 1fr);
-    
+}
+.primer_compani {
+    grid-template-columns: repeat(13, 1fr);
 }
 
 .name_company_span {
@@ -317,7 +319,7 @@ a:focus {
 /* BURGER */
 
 .burger_wrapp {
-    background-color: #fbeec1;
+    background-color: #c6c0a8;
     width: 100%;
     position: fixed;
     z-index: 88;
@@ -441,7 +443,7 @@ a:focus {
 .mobule_header {
     position: fixed;
     height: min-content;
-    background-color: #fbeec1;
+    background-color: #c6c0a8;
     right: 0;
     top: 0px;
     user-select: none;
@@ -560,7 +562,7 @@ a:focus {
 .leader_text {
     white-space: nowrap;
     transition: all 0.4s linear;
-    font-size: 30px;
+    font-size: 25px;
     color: #05386b;
     user-select: none;
 }
@@ -685,7 +687,7 @@ a:focus {
 }
 
 .lead_image_ex {
-    width: 50px;
+    width: 40px;
 }
 
 
@@ -1153,7 +1155,7 @@ label.error{
     transform: translateY(-50%);
     width: 85px;
     height: 85px;
-    background-color: #fbeec1;
+    background-color: #c8c8c9;
     border-radius: 50%;
     color: #ffffff;
     z-index: 10;
@@ -1402,9 +1404,9 @@ label.error{
 }
 
 
-.contact_wrapp_about {
+/* .contact_wrapp_about {
     margin-top: 240px;
-}
+} */
 
 
 
@@ -1426,6 +1428,70 @@ label.error{
     color: #6b0505;
 }
 
+.about_text_sec {
+    user-select: none;
+    font-weight: 500;
+    font-style: normal;
+    text-align: start;
+}
+
+.about_text_sec span {
+    font-family: "Nunito-Bold-italic";
+    font-weight: 900;
+}
+
+.tel_link_btn_about {
+    user-select: none;
+    display: flex;
+    width: fit-content;
+    font-size: 25px;
+    margin: 0 auto;
+    margin-top: 50px;
+    justify-content: center;
+    transition: all 0.4s linear;
+}
+
+.tel_link_btn_about:hover {
+    scale: 1.05;
+    opacity: 0.7;
+    transition: all 0.4s linear;
+}
+
+.tel_about {
+    width: 30px;
+}
+
+
+.about_garant_wrap {
+    margin-top: 50px;
+    width: 100%;
+}
+
+.about_garant_list {
+    display: grid;
+    gap: 10px;
+    justify-content: center;
+    text-align: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.about_garant_item {
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: #ffffffd2;
+    transition: all 0.4s linear;
+}
+
+.about_garant_item:hover {
+    color: #fff;
+    background-color: #00000071;
+    transition: all 0.4s linear;
+}
+
 
 .video {
     pointer-events: none;
@@ -1439,6 +1505,10 @@ label.error{
     width: 100%;
     height: 100%;
     scale: 1.2;
+}
+
+video::-webkit-media-controls {
+    display: none;  
 }
 
 .video_sec {
@@ -1459,9 +1529,21 @@ label.error{
 
 
 
+/* PRIMER */
 
+.img_wrapper_primer {
+    margin-top: 50px;
+}
 
+.img_wrapp_primer_list {
+    display: grid;
+    grid-template-columns: repeat(3, 500px);
+    /* grid-template-rows: repeat(3, 200px); */
+}
 
+.img_primer {
+    object-fit: cover;
+}
 
 
 
@@ -1582,6 +1664,11 @@ label.error{
     }
 }
 
+@media (max-width:1160px) {
+    .about_garant_item {
+        font-size: 13px;
+    }
+}
 @media (max-width:1150px) {
     .text_lead_sec {
         transition: all 0.4s linear;
@@ -1731,7 +1818,7 @@ label.error{
 
 @media (max-width:970px) {
     .lead_image_ex {
-        width: 40px;
+        width: 30px;
     }
 
     .text_lead_sec {
@@ -1755,13 +1842,13 @@ label.error{
         padding-top: 100px;
     }
 
-    .video {
+    /* .video {
         display: none;
     }
 
     .video_sec {
         display: flex;
-    }
+    } */
 
     /* .body_wrapper {
         background: url('./image/fon_mob.mp4') fixed;
@@ -1769,6 +1856,16 @@ label.error{
 }
 
 @media (max-width:910px) {
+
+    .about_garant_list {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .about_garant_item {
+        font-size: 11px;
+    }
+
     .garant_wrapp {
         margin-top: 40px;
     }
@@ -2207,6 +2304,12 @@ label.error{
     }
 }
 
+@media (max-width:500px) {
+    .about_garant_item {
+        padding: 10px;
+        font-size: 9px;
+    }
+}
 @media (max-width:470px) {
     .percent_list {
         scale: 0.55;
