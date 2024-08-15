@@ -82,7 +82,6 @@ window.addEventListener('keydown', (e) => {
 });
 
 
-
 jQuery(document).ready(function () {
 
     $(".phone_pop").mask("+7 (999) 999-99-99"); 
@@ -173,17 +172,6 @@ jin.addEventListener('input', function(e){
     jin.value = jin.value.replace(/[0-9]/g, "");
 });
 
-// btn.addEventListener('click', function(){
-//     let val = jin.value;
-//     let val1 = jnum.value;
-//     if ( val + val1) {
-//     jout.textContent = `Мы с вами свяжимся ${val} !`;
-//     } else {
-//     alert("Введите имя");
-//     }
-// });
-
-
 $("body").on("submit", "#skidka", function(event) {
     event.preventDefault();
     var form = $(this);
@@ -211,84 +199,14 @@ translation: {
 
 
 
+
+
+
 document.querySelector('.name_popup').onclick = function () {
     document.querySelector('.popup_input_text').classList.add('popup_input_text_active');
 }
 document.querySelector('.phone_pop').onclick = function () {
     document.querySelector('.popup_input_text_sec').classList.add('popup_input_text_active');
 }
-
-
-
-// Получаем элементы слайдера
-const slider = document.querySelector('.slider');
-const prevButton = document.querySelector('.prev-button');
-const nextButton = document.querySelector('.next-button');
-const slides = Array.from(slider.querySelectorAll('img'));
-const slideCount = slides.length;
-let slideIndex = 0;
-
-// Устанавливаем обработчики событий для кнопок
-prevButton.addEventListener('click', showPreviousSlide);
-nextButton.addEventListener('click', showNextSlide);
-
-// Функция для показа предыдущего слайда
-function showPreviousSlide() {
-slideIndex = (slideIndex - 1 + slideCount) % slideCount;
-updateSlider();
-}
-
-// Функция для показа следующего слайда
-function showNextSlide() {
-slideIndex = (slideIndex + 1) % slideCount;
-updateSlider();
-}
-
-// Функция для обновления отображения слайдера
-function updateSlider() {
-slides.forEach((slide, index) => {
-    if (index === slideIndex) {
-    slide.style.display = 'block';
-    } else {
-    slide.style.display = 'none';
-    }
-});
-}
-
-function updateSlider() {
-slides.forEach((slide, index) => {
-    if (index === slideIndex) {
-    slide.classList.remove('slider_img_hidden');
-    } else {
-        slide.classList.add('slider_img_hidden');
-    }
-});
-}
-
-// Инициализация слайдера
-updateSlider();
-
-
-// document.addEventListener("DOMContentLoaded", function () {
-//     const backToTop = document.getElementById("back-to-top");
-
-//     // Показать/скрыть кнопку при прокрутке страницы
-//     window.addEventListener("scroll", function () {
-//     if (window.pageYOffset &gt, 300) {
-//         backToTop.style.display = "block";
-//     } else {
-//         backToTop.style.display = "none";
-//     }
-//     });
-
-//     // Плавная прокрутка при клике на кнопку
-//     backToTop.addEventListener("click", function (event) {
-//     event.preventDefault();
-//     window.scrollTo({ top: 0, behavior: "smooth" });
-//     });
-// });
-
-
-
 
 
