@@ -742,7 +742,7 @@ a:focus {
 /* POPUP */
 
 .popup_wrapp_work {
-    background-color: #05386b60;
+    background-color: #a8a7a4bb;
     transition: all 0.4s linear;
     position: fixed;
     opacity: 0;
@@ -1067,6 +1067,7 @@ label.error{
 .list_primer_garant {
     position: relative;
     margin-top: 60px;
+    padding: 70px 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
 }
@@ -1077,7 +1078,7 @@ label.error{
     position: absolute;
     left: 50%;
     user-select: none;
-    top: -60px;
+    top: 0px;
     transform: translate(-50%, -50%);
 }
 
@@ -1698,6 +1699,41 @@ video::-webkit-media-controls {
 }
 
 
+.price_img_wrapp p {
+    font-weight: 700;
+    font-size: 26px;
+}
+
+
+.price_list_image {
+    width: 100%;
+    display: flex;
+    margin-top: 25px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.price_text_img {
+    text-decoration: underline;
+    width: fit-content;
+    font-size: 26px;
+    transition: all 0.4s linear;
+}
+
+.price_text_img:hover {
+    transition: all 0.4s linear;
+    scale: 1.04;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+
 /* АДАПТИВ */
 @media (max-width:1750px) {
     .percent_list {
@@ -1999,6 +2035,11 @@ video::-webkit-media-controls {
     }
 }
 
+@media (max-width:940px) {
+    .price_img_wrapp p {
+        font-size: 20px;
+    }
+}
 @media (max-width:910px) {
 
     .about_garant_list {
@@ -2355,16 +2396,6 @@ video::-webkit-media-controls {
         font-size: 14px;
     }
 }
-/* @media (max-width:550px) {
-
-    .name_company_policy {
-        display: none;
-    }
-
-    .name_company_policy_sec {
-        display: grid;
-    }
-} */
 @media (max-width:540px) {
 
     .name_company_policy {
@@ -2506,6 +2537,13 @@ video::-webkit-media-controls {
 }
 
 @media (max-width:500px) {
+
+
+    .price_text_img {
+        margin: 10px 0;
+        font-size: 18px;
+    }
+
     .about_garant_item {
         padding: 10px;
         font-size: 9px;
