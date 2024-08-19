@@ -4,7 +4,7 @@
     $email = $_POST['email'];
     $text = $_POST['text'];
 
-	$to = "agapidis333@gmail.com"; 
+	$to = "alexander.skarbek@yandex.ru"; 
 	$date = date ("d.m.Y"); 
 	$time = date ("h:i");
 	$from = $email;
