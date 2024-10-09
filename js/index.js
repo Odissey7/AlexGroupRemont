@@ -216,7 +216,7 @@ jin.addEventListener('input', function(e){
 // });
 
 
-$("body").on("submit", "#skidka", function(event) {
+$("body").on("submit", "#skidka", function (event) {
     event.preventDefault();
     var form = $(this);
     $.ajax({
@@ -225,21 +225,15 @@ $("body").on("submit", "#skidka", function(event) {
         success: function (data) {
             // $("body").find("input[type='tel']").mask("+7(999)999-99-99");
             $('input[type="tel"]').mask("+7 (X99) 999-99-99", {
-translation: {
-    'X': {
-        pattern: /9/, optional: false
-    }
-}
-});
-            form.find('.uspeshno').html('<p class="result_d">Ваше сообщение получено, мы свяжемся с Вами в ближайшее время!</p>');
-            event.stopPropagation();
-
-        },
-        error: function (error) {
-            form.find('.uspeshno').html('<p class="modal-form__success-text">Произошла ошибка. Попробуйте позднее.</p>');
+                translation: {
+                    'X': {
+                        pattern: /9/, optional: false
+                    }
+                }
+            });
         }
-    });
-});
+    })
+})
 
 
 
