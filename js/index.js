@@ -196,7 +196,8 @@ let btn = document.getElementById("btn");
 
 
 jin.addEventListener('keydown', function(e){
-    if( e.key.match(/[0-9]/) ) return e.preventDefault();
+    if (e.key.match(/[0-9]/))
+        return e.preventDefault();
   }); // Будет перехватывать все числа при ручном вводе. 
   // Тажке нужна, чтобы replace не сбрасывал каретку, срабатывая каждый раз.
 
