@@ -1,8 +1,12 @@
 <?php
-date_default_timezone_set('Etc/UTC');
+//phpinfo();
+//date_default_timezone_set('Etc/UTC');
+//error_reporting(E_ALL);
 
-require 'vendor/PHPMailer/PHPMailerAutoload.php';
-
+//exit;
+require_once 'vendor/PHPMailer/PHPMailerAutoload.php';
+echo 'TEST';
+exit;
 function url_origin( $s, $use_forwarded_host = false )
 {
     $ssl      = ( ! empty( $s['HTTPS'] ) && $s['HTTPS'] == 'on' );
