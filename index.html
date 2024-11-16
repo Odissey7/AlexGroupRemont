@@ -12,8 +12,8 @@
     <meta property="og:url" content="https://alexgroupremont.ru/" />
     <meta property="og:site_name" content="Ремонт квартир" />
     <meta property="og:title" content="Строительая компания, оказывающая все виды ремонта" />
-    <meta property="og:description" 
-    content="Строительая компания, оказывающая все виды ремонта для частных лиц и компаний" />
+    <meta property="og:description"
+        content="Строительая компания, оказывающая все виды ремонта для частных лиц и компаний" />
     <meta property="og:image" content="https://alexgroupremont.ru/image/slider9.jpg" />
     <script type="application/ld+json">
         {
@@ -225,7 +225,7 @@
             </div>
 
             <div class="popup_wrapp_work" id="popup_wrapp_work">
-                <form action="sender.php" autocomplete="off" method="post" class="form_work" id="form_work1">
+                <!--<form action="sender.php" autocomplete="off" method="post" class="form_work" id="form_work1">-->
                     <div class="form_box_work">
                         <span class="btn_close_popup"></span>
                         <div class="form_wrapper_list">
@@ -241,10 +241,11 @@
                             <button class="popup_btn_sent" id="btn" type="button">Отправить</button>
                         </div>
                     </div>
-                </form>
+                <!--</form>-->
             </div>
             <div class="popup_wrapp_work popup_wrapp_work2" id="popup_wrapp_work_sec">
-                <form action="sender_sec.php" method="post" autocomplete="off" class="form_work form_work2" id="form_work2">
+                <!--<form action="sender_sec.php" method="post" autocomplete="off" class="form_work form_work2"
+                    id="form_work2">-->
                     <div class="form_box_work">
                         <span class="btn_close_popup btn_close_popup2"></span>
                         <div class="form_wrapper_list">
@@ -264,7 +265,7 @@
                             <button class="popup_btn_sent popup_btn_sent2" id="btn2" type="button">Отправить</button>
                         </div>
                     </div>
-                </form>
+                <!--</form>-->
             </div>
 
             <div class="percent_list_big">
@@ -384,6 +385,47 @@
     </div>
 
     <script src="js/index.js"></script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+
+
+            $(document).on('click', '#btn', function (e) {
+                var btn = $(this);
+                    //UTM:{'+x_href+'};'
+                    var args = {
+                        'url': 'MAILSENDER/mail.php',
+                        'data': {
+                            'attrs': 'Новая заявка',
+                            'utm': '',
+                            'name': $('#popup_name').val(),
+                            'tel': $('#popup_num').val(),
+                            'yaid': ''
+                        }
+                    };
+
+                    send_mail(args);
+            });
+
+            function send_mail(args) {
+                $.ajax({
+                    type: 'POST',
+                    url: args.url,
+                    data: args.data,
+                    error: function (jqXHR, exception) {
+                        alert("Приносим свои извинения, по техническим причинам ваше обращение не было передано, позвоните на горячую линию или попробуйте еще раз.");
+                        //$(args.form).find('.btn').prop('disabled', null);
+                        return;
+                        setTimeout(function () {
+                            send_mail(args);
+                        }, 2500);
+                    }
+                }).done(function (data) {
+                    alert("Ваше обращение было сформировано и передано. Первый освободившейся специалист свяжется с Вами (обычно в течении 5-10 минут).");
+                    //$(args.form).find('.btn').prop('disabled', null);
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
