@@ -71,12 +71,12 @@ if (isset($req['tel'])) {
     $mail->Port = 587;
     $mail->SMTPAuth = true;
 
-    $mail->Username = "-----@yandex.ru"; /// ПОЧТА С КОТОРОЙ БУДЕМ ОТПРАВЛЯТЬ
-    $mail->Password = "----"; /// ПАРОЛЬ ОТ ПОЧТЫ ИЛИ ПРИЛОЖЕНИЯ ПРИВЯЗАННОМУ К ПОЧТЕ
+    $mail->Username = "agapidis333@yandex.ru"; /// ПОЧТА С КОТОРОЙ БУДЕМ ОТПРАВЛЯТЬ
+    $mail->Password = "Ao9881601189"; /// ПАРОЛЬ ОТ ПОЧТЫ ИЛИ ПРИЛОЖЕНИЯ ПРИВЯЗАННОМУ К ПОЧТЕ
 
-    $mail->setFrom('----@yandex.ru', 'ИМЯ ОТ КОГО'); /// ПОЧТА И ИМЯ ОТ КОГО ОТПРАВЛЯЕМ
+    $mail->setFrom('agapidis333@yandex.ru', 'Одиссей'); /// ПОЧТА И ИМЯ ОТ КОГО ОТПРАВЛЯЕМ
 
-    $mail->addAddress('-----@yandex.ru', 'ИМЯ'); /// ПОЧТА НА КОТОРУЮ ОТПРАВЛЯЕМ
+    $mail->addAddress('alexander.skarbek@yandex.ru', 'Александр'); /// ПОЧТА НА КОТОРУЮ ОТПРАВЛЯЕМ
 
     $mail->Subject = 'Новая заявка'; /// ТЕМА ПИСЬМА
     $mail->Body = $mail->Subject . " Телефон: " . $data['phone'] . "; Имя: ".$data['name']."; Сообщение: ".$data['message']."; UTM:{". $data['utm'] ."}; [yaID:".$data['yaid']."] "; /// ТЕКСТ ПИСЬМА

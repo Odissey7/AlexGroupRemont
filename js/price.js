@@ -82,6 +82,44 @@ window.addEventListener('keydown', (e) => {
 });
 
 
+
+// ЦЕНЫ
+document.querySelector('#price_text_img_1').onclick = function () { 
+    document.querySelector('.price_dem_wrapp').classList.toggle('price_dem_wrapp_active');
+}
+document.querySelector('#price_text_img_2').onclick = function () { 
+    document.querySelector('.price_stroi_wrapp').classList.toggle('price_stroi_wrapp_active');
+}
+document.querySelector('#price_text_img_3').onclick = function () { 
+    document.querySelector('.price_malar_wrapp').classList.toggle('price_malar_wrapp_active');
+}
+document.querySelector('#price_text_img_4').onclick = function () { 
+    document.querySelector('.price_zvyk_wrapp').classList.toggle('price_zvyk_wrapp_active');
+}
+document.querySelector('#price_text_img_5').onclick = function () { 
+    document.querySelector('.price_santeh_wrapp').classList.toggle('price_santeh_wrapp_active');
+}
+document.querySelector('#price_text_img_6').onclick = function () { 
+    document.querySelector('.price_elect_wrapp').classList.toggle('price_elect_wrapp_active');
+}
+document.querySelector('#price_text_img_7').onclick = function () { 
+    document.querySelector('.price_pol_wrapp').classList.toggle('price_pol_wrapp_active');
+}
+document.querySelector('#price_text_img_8').onclick = function () { 
+    document.querySelector('.price_plit_wrapp').classList.toggle('price_plit_wrapp_active');
+}
+document.querySelector('#price_text_img_9').onclick = function () { 
+    document.querySelector('.price_stolar_wrapp').classList.toggle('price_stolar_wrapp_active');
+}
+document.querySelector('#price_text_img_10').onclick = function () { 
+    document.querySelector('.price_ystanovka_wrapp').classList.toggle('price_ystanovka_wrapp_active');
+}
+document.querySelector('#price_text_img_11').onclick = function () { 
+    document.querySelector('.price_yslugi_wrapp').classList.toggle('price_yslugi_wrapp_active');
+}
+
+
+
 jQuery(document).ready(function () {
 
     $(".phone_pop").mask("+7 (999) 999-99-99"); 

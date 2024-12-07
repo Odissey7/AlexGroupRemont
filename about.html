@@ -116,7 +116,8 @@
                 <span></span>
             </div>
             <div class="popup_wrapp_work" id="popup_wrapp_work">
-                <form action="sender.php" method="post" autocomplete="off" class="form_work" id="form_work1">
+                <!-- <form action="sender.php" method="post" autocomplete="off" class="form_work" id="form_work1"> -->
+                <div class="form_work" id="form_work1">
                     <div class="form_box_work">
                         <span class="btn_close_popup"></span>
                         <div class="form_wrapper_list">
@@ -132,7 +133,8 @@
                             <button class="popup_btn_sent" id="btn" type="button">Отправить</button>
                         </div>
                     </div>
-                </form>
+                </div>
+                <!-- </form> -->
             </div>
 
             <div class="about_company_wrapp">
@@ -243,6 +245,47 @@
     </div>
 
     <script src="js/about.js"></script>
+    <script type="text/javascript">
+        $(window).on('load', function () {
+
+
+            $(document).on('click', '#btn', function (e) {
+                var btn = $(this);
+                //UTM:{'+x_href+'};'
+                var args = {
+                    'url': 'MAILSENDER/mail.php',
+                    'data': {
+                        'attrs': 'Новая заявка',
+                        'utm': '',
+                        'name': $('#popup_name').val(),
+                        'tel': $('#popup_num').val(),
+                        'yaid': ''
+                    }
+                };
+
+                send_mail(args);
+            });
+
+            function send_mail(args) {
+                $.ajax({
+                    type: 'POST',
+                    url: args.url,
+                    data: args.data,
+                    error: function (jqXHR, exception) {
+                        alert("Приносим свои извинения, по техническим причинам ваше обращение не было передано, попробуйте еще раз.");
+                        //$(args.form).find('.btn').prop('disabled', null);
+                        return;
+                        setTimeout(function () {
+                            send_mail(args);
+                        }, 2500);
+                    }
+                }).done(function (data) {
+                    alert("Форма отправлена успешно");
+                    //$(args.form).find('.btn').prop('disabled', null);
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

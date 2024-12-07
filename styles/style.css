@@ -221,6 +221,10 @@ header {
     z-index: 80;
 }
 
+.slogan {
+    user-select: none;
+}
+
 .about_compani {
     grid-template-columns: repeat(10, 1fr);
 }
@@ -1595,10 +1599,12 @@ video::-webkit-media-controls {
     opacity: 0.7;
 }
 .price_img_wrapp p {
+    user-select: none;
     font-weight: 700;
     font-size: 26px;
 }
 .price_list_image {
+    user-select: none;
     width: 100%;
     display: flex;
     margin-top: 25px;
@@ -1608,10 +1614,12 @@ video::-webkit-media-controls {
     align-items: center;
 }
 .price_text_img {
+    cursor: pointer;
     text-decoration: underline;
     width: fit-content;
     font-size: 26px;
     transition: all 0.4s linear;
+    margin-bottom: 0;
 }
 .price_text_img:hover {
     transition: all 0.4s linear;
@@ -1619,7 +1627,241 @@ video::-webkit-media-controls {
     opacity: 0.7;
 }
 
+.price_item {
+    display: contents;
+}
 
+/* ДЕМОНТАЖ */
+
+.price_dem_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_dem_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+.price_all {
+    white-space: nowrap;
+    transition: all 0.4s linear;
+    display: flex;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 16px;
+    justify-content: space-between;
+}
+
+/* СТРОЙ РАБОТЫ */
+.price_stroi_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_stroi_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+/* МАЛЯР */
+.price_malar_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_malar_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+/* ЗВУК */
+.price_zvyk_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_zvyk_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+/* САНТЕХ */
+.price_santeh_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_santeh_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+/* ЕЛЕКТРО */
+.price_elect_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_elect_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+/* ПОЛ */
+.price_pol_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_pol_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+/* ПЛИТКА */
+.price_plit_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_plit_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+/* СЛОТЯР */
+.price_stolar_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_stolar_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+/* УСТАНОВКА */
+.price_ystanovka_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_ystanovka_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
+/* СОПУТСТ УСЛУГИ */
+.price_yslugi_wrapp {
+    user-select: none;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.4s linear;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+}
+.price_yslugi_wrapp_active {
+    user-select: auto;
+    width: 100%;
+    height: 100%;
+    transition: all 0.4s linear;
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+}
 
 /* АДАПТИВ */
 @media (max-width:1750px) {
@@ -1713,6 +1955,14 @@ video::-webkit-media-controls {
 @media (max-width:1160px) {
     .about_garant_item {
         font-size: 13px;
+    }
+}
+@media (max-width:1190px) {
+    .price_all {
+        width: 90%;
+        transition: all 0.4s linear;
+        font-size: 12px;
+        /* scale: 0.7; */
     }
 }
 @media (max-width:1150px) {
@@ -1816,22 +2066,6 @@ video::-webkit-media-controls {
         height: 600px;
     }
 }
-@media (max-width:960px) {
-    .nav_footer {
-        scale: 0.8;
-        width: 100%;
-    }
-    .btn_footer {
-        width: 230px;
-        font-size: 16px;
-    }
-    .back-to-top {
-        scale: 0.9;
-    }
-    .back-to-top:hover {
-        scale: 1;
-    }
-}
 @media (max-width:970px) {
     .lead_image_ex {
         width: 30px;
@@ -1851,6 +2085,22 @@ video::-webkit-media-controls {
     }
     .head_big_wrapp {
         padding-top: 100px;
+    }
+}
+@media (max-width:960px) {
+    .nav_footer {
+        scale: 0.8;
+        width: 100%;
+    }
+    .btn_footer {
+        width: 230px;
+        font-size: 16px;
+    }
+    .back-to-top {
+        scale: 0.9;
+    }
+    .back-to-top:hover {
+        scale: 1;
     }
 }
 @media (max-width:940px) {
@@ -2029,6 +2279,11 @@ video::-webkit-media-controls {
         font-size: 12px;
     }
 }
+@media (max-width:720px) {
+    .price_all {
+        font-size: 9px;
+    }
+}
 @media (max-width:700px) {
     .primer_text_list {
         width: 90%;
@@ -2044,6 +2299,11 @@ video::-webkit-media-controls {
     }
 }
 @media (max-width:670px) {
+
+    .price_text_img {
+        font-size: 22px;
+    }
+
     .nav_footer {
         scale: 0.6;
     }
@@ -2202,6 +2462,11 @@ video::-webkit-media-controls {
     }
     .back-to-top:hover {
         scale: 0.85;
+    }
+}
+@media (max-width:520px) {
+    .price_all {
+        font-size: 7px;
     }
 }
 @media (max-width:510px) {
@@ -2372,6 +2637,14 @@ video::-webkit-media-controls {
         transform: translate(0%, -15%);
     }
 }
+@media (max-width:410px) {
+    .price_text_img {
+        font-size: 16px;
+    }
+    .price_all {
+        font-size: 6px;
+    }
+}
 @media (max-width:400px) {
     .contact_item {
         scale: 0.9;
@@ -2426,6 +2699,14 @@ video::-webkit-media-controls {
     }
     .contact_list {
         transform: translate(-5.5%, 0);
+    }
+}
+@media (max-width:360px) {
+    .price_text_img {
+        font-size: 14px;
+    }
+    .price_all {
+        font-size: 5px;
     }
 }
 @media (max-width:340px) {
